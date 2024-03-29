@@ -4,7 +4,7 @@ node {
         checkout scm
     }
     stage('Build image') {
-       app = docker.build("JovanSimonoski/devops-blueocean-04")
+       app = docker.build("jovansimonoski/devops-blueocean-04")
     }
     stage('Push image') {   
         docker.withRegistry('https://registry.hub.docker.com', 'js-dockerhub') {
